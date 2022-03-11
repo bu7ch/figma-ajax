@@ -1,4 +1,6 @@
-const apiKey = "339202-7d7fd43c-8a39-4150-a6e4-d4fff51df762";
+const fileNumber = ""; //TODO: Mettre votre numéro de fichier
+
+const apiKey = ""; ////TODO: Mettre votre clé d'API figma
 
 const apiHeaders = {
   headers: {
@@ -49,9 +51,8 @@ const loadImages = function (obj) {
         return data.images[id];
       });
     });
-  
 };
 
-loadFile("lmtAwlp9JOw2P28wTtbr56")
+loadFile(fileNumber)
   .then((ids) => loadImages(ids))
   .then((imageUrls) => addImageToSite(imageUrls));
